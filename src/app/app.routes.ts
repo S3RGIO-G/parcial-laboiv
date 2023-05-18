@@ -26,12 +26,12 @@ export const routes : Routes = [
     canActivate:[LoginGuard]
     
   }, 
-  // {
-  //   path:'repartidor/detalle',
-  //   title:'Detalle Repartidor',
-  //   loadComponent:() => import('./pages/repartidor-detalle/repartidor-detalle.component').then( m => m.RepartidorDetalleComponent),
-  //   canActivate:[LoginGuard]
-  // }, 
+  {
+    path:'repartidor/detalle',
+    title:'Detalle Repartidor',
+    loadComponent:() => import('./pages/repartidor-detalle/repartidor-detalle.component').then( m => m.RepartidorDetalleComponent),
+    canActivate:[LoginGuard]
+  }, 
   {
     path:'**',
     redirectTo: 'bienvenido',
