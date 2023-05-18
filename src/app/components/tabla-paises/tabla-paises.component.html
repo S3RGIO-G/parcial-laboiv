@@ -1,0 +1,12 @@
+<ng-container>
+  <h3 class="mt-4">Países</h3>
+  <div class="table-container overflow-y-auto text-center">
+    <div class="flags-container ">
+      <div *ngFor="let country of countries" (click)="onClick(country)"
+        class="d-flex flex-column m-3 justify-content-center align-items-center cursor-pointer">
+        <img [src]="country.img" alt="">
+        <b class="fs-4">{{country.name}}</b>
+      </div>
+    </div>
+  </div>
+</ng-container>

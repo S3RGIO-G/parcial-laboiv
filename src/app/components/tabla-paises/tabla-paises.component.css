@@ -1,0 +1,13 @@
+.table-container{
+  height: 500px;
+  background-color: rgb(226, 232, 237);
+}
+
+
+.flags-container > div{
+  cursor: pointer;
+}
+img{
+  width: 150px;
+  height: 100px;  
+}

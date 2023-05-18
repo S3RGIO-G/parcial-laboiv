@@ -1,0 +1,56 @@
+<ng-container>
+  <div class="vh-100">
+    <app-navbar [showButtons]="true" [usuario]="user" (loadingEvent)="loading = $event"></app-navbar>
+    <div class="main position-relative">
+      <app-spinner [showSpinner]="loading"></app-spinner>
+      <div class="d-flex justify-content-center align-items-center contenedor position-relative">
+        <div class="p-4 container-text">
+          <h1 class="text-center">¡Bienvenido!</h1>
+          <h5 class="text-center">A continuacion te dejo mi información de github</h5>
+          <div class="container-fluid mt-5">
+            <div class="row gap-3">
+              <div class="col-12 col-md-4 d-flex justify-content-center">
+                <img [src]="infoGithub?.avatar_url">
+              </div>
+              <div class="col-12 col-md-7">
+                <div>
+                  <b>Nombre y Apellido: </b>
+                  <span>{{infoGithub?.name}}</span>
+                </div>
+                <div>
+                  <b>Usuario: </b>
+                  <span>{{infoGithub?.login}}</span>
+                </div>
+                <div>
+                  <b>Ubicación: </b>
+                  <span>{{infoGithub?.location}}</span>
+                </div>
+                <div>
+                  <b>Seguidores: </b>
+                  <span>{{infoGithub?.followers}}</span>
+                </div>
+                <div>
+                  <b>Seguidos: </b>
+                  <span>{{infoGithub?.following}}</span>
+                </div>
+                <div>
+                  <b>Repositorios públicos: </b>
+                  <span>{{infoGithub?.public_repos}}</span>
+                </div>
+                <div>
+                  <b>Tipo: </b>
+                  <span>{{infoGithub?.type}}</span>
+                </div>
+                <div>
+                  <b>Para mas informacion podes ingresar en este <a [href]="infoGithub?.html_url" target="blank
+                  ">link</a></b>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>

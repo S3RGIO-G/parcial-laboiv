@@ -1,0 +1,15 @@
+.container-text{
+  max-width: 750px;
+}
+.main{
+  height: 90%;
+}
+.contenedor{
+  min-height: 90% !important;
+}
+
+img{
+  width: 200px;
+  height: 200px;
+  border-radius: 50px;
+}

@@ -1,0 +1,19 @@
+<app-navbar [showButtons]="true" [usuario]="user" (loadingEvent)="loading=$event"></app-navbar>
+<app-spinner [showSpinner]="loading"></app-spinner>
+<div class="container-fluid contenedor w-100 position-relative">
+  
+  <div class="row justify-content-center align-items-center gap-5 gap-md-0 ">
+    <div class="col-10 text-center mb-md-5">
+      <h1>Alta Actor</h1>
+    </div>
+    
+    <div class="col-12 col-md-6 col-lg-4 ">
+      <app-form-repartidor #form [selectedCountry]="selectedCountry"
+      (loadingEvent)="loading = $event"></app-form-repartidor>
+    </div>
+    
+    <div class="col-12 col-md-6 col-lg-5 col-xxl-3 pb-5 pb-md-0">
+      <app-tabla-paises (selectCountryEvent)="selectCountry($event)"></app-tabla-paises>
+    </div>
+  </div>
+</div>
