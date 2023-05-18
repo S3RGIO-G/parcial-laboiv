@@ -1,0 +1,19 @@
+<ng-container>
+  <h3 class="">Detalle Del País</h3>
+  <div  class="d-flex m-3 justify-content-center align-items-center bg-secondary rounded contenedor">
+    <div *ngIf="repartidor" class="d-flex">
+      
+      <img [src]="repartidor.pais_origen?.img" alt="" class="me-3">
+      <div>
+        <div>
+          <b>Nombre: </b>
+          <span >{{repartidor.pais_origen?.name}}</span>
+        </div>
+        <div>
+          <b>Lenguaje: </b>
+          <span >{{repartidor.pais_origen?.language}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>

@@ -1,0 +1,23 @@
+<app-navbar [showButtons]="true" [usuario]="user" (loadingEvent)="loading = $event"></app-navbar>
+<app-spinner [showSpinner]="loading"></app-spinner>
+<div class="container-fluid contenedor p-4 h-100">
+  <div class="row row-table justify-content-center pt-5 overflow-y-auto h-50">
+    <div class="col-10 ">
+      <h1>Lista de Repartidores</h1>
+      <p class="m-0">Aca se van a listar todos los repartidores</p>
+      <div class="table-container">
+        <app-repartidor-listado (selectedRepartidorEvent)="selectedRepartidor($event)">
+        </app-repartidor-listado>
+      </div>
+    </div>
+  </div>
+
+  <div class="row justify-content-center pt-3 h-50 gap-4">
+    <div class="col-12 col-md-5">
+      <app-detalle-card [repartidor]="selected" (cleanRepartidorEvent)="selected = $event"></app-detalle-card>
+    </div>
+    <div class="col-12 col-md-5">
+      <app-detalle-pais [repartidor]="selected"></app-detalle-pais>
+    </div>
+  </div>
+</div>

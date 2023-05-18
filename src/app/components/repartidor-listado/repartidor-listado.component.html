@@ -1,0 +1,18 @@
+<ng-container>
+  <h3 class="mt-4">Repartidores</h3>
+  <div class="table-container overflow-y-auto">
+    <div class="flags-container">
+      <div *ngFor="let repartidor of repartidores" (click)="onClick(repartidor)"
+        class="d-flex flex-column m-3 justify-content-center align-items-center bg-secondary rounded">
+        <div>
+          <b>DNI: </b>
+          <span>{{repartidor.dni}}</span>
+        </div>
+        <div>
+          <b>NOMBRE: </b>
+          <span>{{repartidor.nombre}}</span>
+        </div>
+      </div>
+    </div> 
+  </div>
+</ng-container>

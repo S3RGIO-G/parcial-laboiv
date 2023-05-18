@@ -1,0 +1,29 @@
+<ng-container>
+  <h3 class="">Detalle Del Repartidor</h3>
+  <div  class="d-flex flex-column m-3 justify-content-center align-items-center bg-secondary rounded contenedor">
+    <div *ngIf="repartidor">
+      <div>
+        <b>DNI: </b>
+        <span>{{repartidor.dni}}</span>
+      </div>
+      <div>
+        <b>Nombre: </b>
+        <span>{{repartidor.nombre}}</span>
+      </div>
+      <div>
+        <b>Edad: </b>
+        <span>{{repartidor.edad}}</span>
+      </div>
+      <div>
+        <b>Capacidad de Transporte: </b>
+        <span>{{repartidor.capacidad_transporte}}</span>
+      </div>
+      <div>
+        <b>Unidad propia: </b>
+        <span>{{repartidor.unidad_propia ? 'Si' : 'No'}}</span>
+      </div>
+    </div>
+  </div>
+  <button type="button" class="btn btn-secondary mt-2" (click)="cleanRepartidor()" [disabled]="repartidor? false : true">Limpiar</button>
+
+</ng-container>
