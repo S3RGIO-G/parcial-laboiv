@@ -1,0 +1,23 @@
+<form (submit)="onSubmit()" [formGroup]="formAlta">
+
+  <app-form-input class="form-control {{nombre.errors ? 'is-invalid': ''}}" divClass="mb-3" label="Nombre"
+    controlName="nombre" type="text">
+    <small class="invalid-feedback">Nombre invalido (solo letras) </small>
+  </app-form-input>
+
+  <app-form-input class="form-control {{ingredientes.errors ? 'is-invalid': ''}}" divClass="mb-3" label="Ingredientes"
+    controlName="ingredientes" type="text">
+    <small class="invalid-feedback">Ingredientes invalidos (solo letras)</small>
+  </app-form-input>
+
+  <app-form-input class="form-control {{precio.errors ? 'is-invalid': ''}}" divClass="mb-3" label="Precio"
+    controlName="precio" type="text">
+    <small class="invalid-feedback">Precio invalida (solo numeros)</small>
+  </app-form-input>
+
+  <app-form-input class="form-control {{peso.errors ? 'is-invalid': ''}}" divClass="mb-3"
+    label="Peso aproximado" controlName="peso" type="text">
+  </app-form-input>
+
+  <button type="submit" class="btn btn-primary mt-2">Enviar</button>
+</form>

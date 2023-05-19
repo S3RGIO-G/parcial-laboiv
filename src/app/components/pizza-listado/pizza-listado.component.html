@@ -1,0 +1,22 @@
+<ng-container >
+  <table class="table table-light ">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Ingredientes</th>
+        <th scope="col">Precio</th>
+        <th scope="col">Peso aprox</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let pizza of pizzas; index as i" (click)="selectPizza(pizza.id || '')">
+        <th scope="row">{{i+1}}</th>
+        <td>{{pizza.nombre}}</td>
+        <td>{{pizza.ingredientes}}</td>
+        <td>{{pizza.precio}}</td>
+        <td>{{pizza.peso}}</td>
+      </tr>
+    </tbody>
+  </table>
+</ng-container>

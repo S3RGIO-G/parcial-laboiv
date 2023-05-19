@@ -1,0 +1,30 @@
+<app-navbar [showButtons]="true" [usuario]="user" (loadingEvent)="loading=$event"></app-navbar>
+
+<div class="container-fluid contenedor p-4 h-100">
+  <div class="row row-table justify-content-center pt-5 overflow-y-auto h-50">
+    <div class="col-10 ">
+      <h1>Lista de Pizzas</h1>
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <p class="m-0">Aca se van a listar todas las Pizzas</p>
+      </div>
+      <div class="table-container">
+        <app-pizza-listado (selectPizzaEvent)="selectedPizza($event)">
+        </app-pizza-listado>
+      </div>
+    </div>
+  </div>
+
+  <div class="row justify-content-center pt-3 h-50 gap-4">
+    <div class="col-12 col-md-3">
+      <app-pizza-alta (pizzaCreadaEvent)="pizzaCreada($event)"></app-pizza-alta>
+    </div>
+    <div class="col-12 col-md-3">
+      <app-pizza-modificacion [pizza]="selected"></app-pizza-modificacion>
+    </div>
+    <div class="col-12 col-md-3">
+      <!-- <app-modificar-pelicula #modificar [selected]="selected"
+        (cleanSelectedEvent)="changeSelected($event)"></app-modificar-pelicula> -->
+    </div>
+  </div>
+
+</div>
