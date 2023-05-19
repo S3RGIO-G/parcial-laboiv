@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PizzaListadoComponent } from 'src/app/components/pizza-listado/pizza-listado.component';
 import { Pizza } from 'src/app/classes/pizza';
@@ -23,12 +23,15 @@ export class PizzaAbmComponent implements OnInit {
   user!: any;
   selected!: Pizza;
   loading = false;
+  @ViewChild('modificar') modificar !: PizzaModificacionComponent;
+
   ngOnInit(): void {
     this.cargarUsuario();
   }
 
   selectedPizza(e: any) {
     this.selected = e;
+    this.modificar.setValuesForm(e);
   }
 
   pizzaCreada(e: Pizza) {

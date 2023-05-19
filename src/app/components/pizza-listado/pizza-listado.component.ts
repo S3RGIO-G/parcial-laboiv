@@ -1,7 +1,8 @@
-import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Pizza } from 'src/app/classes/pizza';
 import { PizzaService } from 'src/app/services/pizza.service';
+import { PizzaModificacionComponent } from '../pizza-modificacion/pizza-modificacion.component';
 
 @Component({
   selector: 'app-pizza-listado',
@@ -28,4 +29,6 @@ export class PizzaListadoComponent implements OnInit{
       if (element.id === id) this.selectPizzaEvent.emit(element);
     });
   }
+
+
 }

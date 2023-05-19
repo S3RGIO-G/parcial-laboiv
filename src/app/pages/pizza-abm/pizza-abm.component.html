@@ -19,7 +19,7 @@
       <app-pizza-alta (pizzaCreadaEvent)="pizzaCreada($event)"></app-pizza-alta>
     </div>
     <div class="col-12 col-md-3">
-      <app-pizza-modificacion [pizza]="selected"></app-pizza-modificacion>
+      <app-pizza-modificacion #modificar [pizza]="selected"></app-pizza-modificacion>
     </div>
     <div class="col-12 col-md-3">
       <!-- <app-modificar-pelicula #modificar [selected]="selected"
